@@ -1,0 +1,32 @@
+	<head>
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="{{ "/css/socialicious.css" | prepend: site.baseurl }}">
+		<link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+		<link rel="stylesheet" type="text/css" href="{{ "/css/monokai.css" | prepend: site.baseurl }}">
+		<title>{{site.blog_title}}</title>	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="{{ "/js/highlight.pack.js" | prepend: site.baseurl }}"></script>
+		<script type="text/javascript">hljs.initHighlightingOnLoad();</script>		
+		<script type="text/javascript" src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+		<script type="text/javascript" src="{{ "/js/jquery.masonry.min.js" | prepend: site.baseurl }}"></script>
+		<script type="text/javascript" src="{{ "/js/jquery.imagesloaded.min.js" | prepend: site.baseurl }}"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+			function applyTiles() {
+				var posts = $('#posts ul');
+				posts.imagesLoaded(function() {
+					$('#posts ul').masonry({ itemSelector : '.post' });;
+				});
+			}
+			$(function() {
+				applyTiles();
+			});
+			$(window).resize(function() {
+				applyTiles();
+			});
+		</script>
+		<style type="text/css">
+		</style>
+	</head>
